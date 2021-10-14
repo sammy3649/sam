@@ -5,76 +5,113 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         // Задача 1
-        byte a = 5;
-        short b = 31767;
-        int c = 2_142_542_321;
-        long d = 1_125_258_456_789_456_896L;
-        float e = 3.14f;
-        double f = 1.456;
+      int clientOs = 1;
+          if (clientOs == 1) {
+           System.out.println("Установите версию приложения для Android по ссылке");
+      }
+          if (clientOs == 0) {
+           System.out.println("Установите версию приложения для iOS по ссылке");
+      }
+
 
         // Задача 2
-        float boxerOne = 78.2f;
-        float boxerTwo = 82.7f;
-        var boxerWeight = boxerTwo + boxerOne;
-        System.out.println("Общий вес " + boxerWeight + " кг");
-        var boxerDifferent = boxerTwo - boxerOne;
-        System.out.println("Разница в весе "+ boxerDifferent + " кг");
+        int clientDeviceYear = 2016;
+        int clientOs1 = 1;
+        if (clientOs1 == 1 && clientDeviceYear >= 2015){
+            System.out.println("Установите версию приложения для IOS по ссылке");
+        }
+        else if (clientOs1 == 1 && clientDeviceYear < 2015){
+            System.out.println("Установите облегченную версию для IOS по ссылке");
+        }
+        if (clientOs1 == 0 && clientDeviceYear >= 2015){
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+        else if (clientOs1 == 0 && clientDeviceYear < 2015){
+            System.out.println("Установите облегченную версию для Android по ссылке");
+        }
 
 
-        // Задача 3
-        short bananas = 80;
-        bananas = 5 * 80;
-        short milk = 105;
-        milk = 2 * 105;
-        short plombire = 100;
-        plombire = 2 * 100;
-        short eggs = 70;
-        eggs = 4 * 70;
-        float breakfast = bananas + milk + plombire + eggs;
-        System.out.println("Вес завтрака " + breakfast + " грамм!");
-        breakfast = breakfast / 1000;
-        System.out.println("Вес " + breakfast + " кг!!");
+          // Задача 3
+      int year = 2021;
+          if (year %4 == 0 || year %400 == 0) {
+           System.out.println("Высокосный год");
+      }
+          else if (year %100 != 0){
+           System.out.println("Не высокосный год");
+      }
 
 
-        // Задача 4
-        short needToLoseWeight = 7;
-        needToLoseWeight = 7 * 1000;
-        short canLoseForDay1 = 250;
-        System.out.println("Нужно дней " + needToLoseWeight / canLoseForDay1);
-        byte needsDays1 = 28;
-        short canLoseForDay2 = 500;
-        System.out.println("Нужно дней " + needToLoseWeight / canLoseForDay2);
-        byte needsDays2 = 14;
-        System.out.println("Среднее количество дней "+ (needsDays1 + needsDays2 ) / 2 );
+          // Задача 4
+      int deliveryDistance = 95;
+          if (deliveryDistance <= 20){
+           System.out.println("Потребуется дней для доставки: 1 сутки");
+      }
+          else if (deliveryDistance == 20 || deliveryDistance <= 60){
+              System.out.println("Потребуется дней для доставки: 2 суток");
+      }
+          else if (deliveryDistance == 60 || deliveryDistance <= 100) {
+              System.out.println("Потребуется дней для доставки: 3 суток");
+      }
 
 
-        // Задача 5
-        int mashaWasMonths = 67_760;
-        float mashaDifferentMonths = mashaWasMonths * 0.1f;
-        float mashaNewMonths = mashaWasMonths + mashaDifferentMonths;
-        System.out.println("Маша теперь получает в месяц " + mashaNewMonths + " Годовой доход вырос на " + mashaDifferentMonths * 12 + " рублей");
+          // Задача 5
+        int monthNumber = 12;
+           switch (monthNumber){
+            case 1:
+             System.out.println("Январь(Зима)");
+              break;
 
-        int denisWasMonths = 83_690;
-        float denisDifferentMonths = denisWasMonths * 0.1f;
-        float denisNewMonths = denisWasMonths + denisDifferentMonths;
-        System.out.println("Денис теперь получает в месяц " + denisNewMonths + " Годовой доход вырос на " + denisDifferentMonths * 12 + " рублей");
+            case 2:
+             System.out.println("Февраль(Зима)");
+              break;
 
-        int krisWasMonths = 76_230;
-        float krisDifferentMonths = krisWasMonths * 0.1f;
-        float krisNewMonths = krisWasMonths + krisDifferentMonths;
-        System.out.println("Кристина теперь получает в месяц " + krisNewMonths + " Годовой доход вырос на " + krisDifferentMonths * 12 + " рублей");
+            case 3:
+             System.out.println("Март(Весна)");
+              break;
 
+            case 4:
+             System.out.println("Апрель(Весна)");
+              break;
 
+            case 5:
+             System.out.println("Май(Весна)");
+              break;
 
+            case 6:
+             System.out.println("Июнь(Лето)");
+              break;
 
+            case 7:
+             System.out.println("Июль(Лето)");
+              break;
 
+            case 8:
+             System.out.println("Август(Лето)");
+              break;
 
+            case 9:
+             System.out.println("Сентябрь(Осень)");
+              break;
 
+            case 10:
+             System.out.println("Октябрь(Осень)");
+              break;
 
+            case 11:
+             System.out.println("Ноябрь(Осень)");
+              break;
 
+            case 12:
+             System.out.println("Декабрь(Зима)");
+              break;
 
+            default:
+             System.out.println("Такого месяца не существует =) Даже в календаре племени Майя");
+        }
 
     }
-}
+  }
+
+
 
 
